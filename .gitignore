@@ -1,5 +1,6 @@
 target/
 work/
+bin/
 
 # IntelliJ project files 
 *.iml

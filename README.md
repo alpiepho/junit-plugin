@@ -19,9 +19,15 @@ Then you can add jobs (with numerous builds) to ...junit-plugin/work/jobs
 To publish:
 mvn package
 
-Then you can upload junit-plugin.hpi to your production Jenkins.  Since this is
+Then you can upload junit-plugin.hpi to your production Jenkins (using Jenkins::
+Manage Plugins::Advanced and upload file).  Since this is
 a modfication of the default JUnit plugin, you cannot remove.  However, you
 should be able to Downgrade to the previous version.
+
+:warning: WARNING: you can only down grade one verison.  In other words if you add
+this version, then another, you can't go back to the first.  An alternative is to
+grab an older version of JUnit from https://updates.jenkins.io/download/plugins/junit/,
+and install that file.
 
 [![Jenkins Plugin](https://img.shields.io/jenkins/plugin/v/junit.svg)](https://plugins.jenkins.io/junit)
 [![GitHub release](https://img.shields.io/github/release/jenkinsci/junit-plugin.svg?label=release)](https://github.com/jenkinsci/junit-plugin/releases/latest)
