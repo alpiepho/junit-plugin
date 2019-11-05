@@ -1,4 +1,27 @@
-# JUnit Plugin for Jenkins
+# JUnit Plugin for Jenkins - EXTENDED
+
+## NOTES about EXTENDED version
+
+This is a modified version that extends a small part of the original 
+JUnit plugin.  
+
+Specifically, the *testReport page for a build was only showing 
+"All Failed Tests" and "All Tests".  This was extended to show 
+"All Skipped Tests" between those other sections.
+
+### Test and Package
+
+To test with local instance of Jenkins:
+mvn hpi:run
+
+Then you can add jobs (with numerous builds) to ...junit-plugin/work/jobs
+
+To publish:
+mvn package
+
+Then you can upload junit-plugin.hpi to your production Jenkins.  Since this is
+a modfication of the default JUnit plugin, you cannot remove.  However, you
+should be able to Downgrade to the previous version.
 
 [![Jenkins Plugin](https://img.shields.io/jenkins/plugin/v/junit.svg)](https://plugins.jenkins.io/junit)
 [![GitHub release](https://img.shields.io/github/release/jenkinsci/junit-plugin.svg?label=release)](https://github.com/jenkinsci/junit-plugin/releases/latest)

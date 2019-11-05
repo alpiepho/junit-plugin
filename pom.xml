@@ -7,14 +7,14 @@
         <relativePath />
     </parent>
     <artifactId>junit</artifactId>
-    <version>${revision}${changelist}</version>
+    <version>${revision}${changelist}-EXTENDED</version>
     <packaging>hpi</packaging>
     <name>JUnit Plugin</name>
-    <description>Allows JUnit-format test results to be published.</description>
+    <description>Allows JUnit-format test results to be published. EXTENDED</description>
     <url>https://github.com/jenkinsci/junit-plugin</url>
     <properties>
-        <revision>1.29</revision>
-        <changelist>-SNAPSHOT</changelist>
+        <revision>10.29</revision>
+        <changelist>-EXTENDED-0.2-</changelist>
         <jenkins.version>2.138.4</jenkins.version>
         <java.level>8</java.level>
         <no-test-jar>false</no-test-jar>

@@ -47,6 +47,26 @@ THE SOFTWARE.
     </table>
   </j:if>
 
+  <j:if test="${it.skipCount!=0}">
+    <h2>${%All Skipped Tests}</h2>
+    <table class="pane sortable bigtable stripped">
+      <tr>
+        <td class="pane-header">${%Test Name}</td>
+        <td class="pane-header" style="width:4em"></td>
+        <td class="pane-header" style="width:3em">${%Age}</td>
+      </tr>
+      <j:forEach var="f" items="${it.skippedTests}" varStatus="i">
+        <tr>
+          <td class="pane no-wrap"><t:failed-test result="${f}" url="${f.getRelativePathFrom(it)}"/></td>
+          <td class="pane no-wrap" style="text-align:right;"> </td>
+          <td class="pane" style="text-align:right;">
+            ${f.age}
+          </td>
+        </tr>
+      </j:forEach>
+    </table>
+  </j:if>
+
   <j:if test="${it.totalCount!=0}">
     <h2>${%All Tests}</h2>
     <table class="pane sortable bigtable stripped" id="testresult">
